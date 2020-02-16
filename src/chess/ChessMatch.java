@@ -44,6 +44,9 @@ public class ChessMatch {
 		if(!board.thereIsAPiece(position)) {
 			throw new ChessExecption("The is no piece on the source position!");
 		}
+		if (!board.piece(position).isThereAnyPossibleMove()) {
+			throw new ChessExecption("The is no possible movies for the choosen piece!");
+		}
 	}
 
 
